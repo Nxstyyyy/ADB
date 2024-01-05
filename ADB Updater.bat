@@ -3,7 +3,9 @@ TITLE ADB Updater
 
 if exist "adb.new.exe" (
     taskkill /IM "adb.exe" /F
-    
+
+    timeout /t 5 /nobreak
+
     echo New Version of ADB Exists!
     
     if exist "adb.exe" (
