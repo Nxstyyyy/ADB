@@ -1,7 +1,7 @@
 @echo off
 TITLE ADB Updater
 
-if exist "ADB.new.exe" (
+if exist "adb.new.exe" (
     taskkill /IM "adb.exe" /F
     
     echo New Version of ADB Exists!
