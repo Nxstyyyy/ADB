@@ -14,7 +14,7 @@ if exist "ADB.new.exe" (
 
     ren "ADB.new.exe" "ADB.exe"
 
-    ADB.exe
+    start ADB.exe
 ) else (
     echo New Version of ADB Could not found it
 )
