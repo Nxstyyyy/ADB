@@ -2,7 +2,11 @@
 TITLE ADB Updater
 
 if exist "adb.new.exe" (
-    taskkill /IM "adb.exe" /F
+    tasklist /FI "IMAGENAME eq adb.exe" | find /I "adb.exe" >NUL
+    if %ERRORLEVEL% equ 0 (
+        echo ADB is running. Killing the process...
+        taskkill /F /IM "adb.exe"
+    )
 
     timeout /t 5 /nobreak
 
